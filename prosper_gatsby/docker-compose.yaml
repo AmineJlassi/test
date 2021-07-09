@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  node:
+    build: ./prosper
+    hostname: node
+    volumes:
+      - ./prosper/src:/home/node/app/src
+      - ./prosper/public:/home/node/app/public
+    ports:
+      - 8181:8000
+   
